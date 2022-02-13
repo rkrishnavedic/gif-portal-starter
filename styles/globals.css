@@ -1,3 +1,20 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .App {
   height: 100vh;
   background-color: #1a202c;
@@ -88,25 +105,19 @@
 }
 
 .gif-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-gap: 1.5rem;
-  justify-items: center;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .gif-grid .gif-item {
   display: flex;
-  flex-direction: column;
-  position: relative;
-  justify-self: center;
-  align-self: center;
+  flex-wrap: wrap;
+  padding: 10px;
 }
 
 .gif-item img {
-  width: 100%;
-  height: 300px;
+  height: 130px;
   border-radius: 10px;
   object-fit: cover;
 }
@@ -122,7 +133,7 @@
   background-color: rgba(0, 0, 0, 0.25);
   border: none;
   border-radius: 10px;
-  margin: 50px auto;
+  margin: 10px auto;
 }
 
 .connected-container button {
